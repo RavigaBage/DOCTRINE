@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doctrine</title>
+    <link rel="stylesheet" href="css/all.css"/>
+    <link rel="stylesheet" href="css/platform.css" />
+    <script src="js/tool_script.js" defer></script>
+  </head>
+  <body>
+    <!-- header section starts  -->
+
+    <nav class="header">
+      <div id="menu-btn" class="fas fa-bars"></div>
+      <a
+       href="index.html" class="logo">
+        <i class="fas fa-bible"></i>DOCTRINE
+      </a>
+      <div class="list">
+        <a href="index.html">home</a>
+        <a href="platform.html">platform</a>
+        <a href="sermonpage.html">sermons</a>
+        <a  href="stories.html">stories</a>
+        <div class="user">
+            <img src="images/blog-1.jpg" alt="" id='user_profile'/>
+            <p>Rev Kofi micheal</p>
+            <div class="List" id="user_profileList">
+                <ul>
+                    <li>Profile <i class="fas fa-user"></i></li>
+                    <li>Account setting <i class="fas fa-cog"></i></li>
+                    <li>Display settings <i class="fas fa-eye"></i></li>
+                    <li>Subscriptions <i class="fas fa-clipboard-check"></i></li>
+                    <li>chat room <i class="fas fa-mobile-alt"></i></li>
+                    <li>History <i class="fas fa-concierge-bell"></i></li>
+                    <li>Log Out <i class="fas fa-user"></i></li>
+                    <li>Downloads<i class="fas fa-arrow-down"></i></li>
+                    <li >Switch off<i class="fas fa-toggle-off" id="switch_toggle"></i></li>
+                </ul>
+            </div>
+        </div>
+       </div>
+        </nav>
+<section class="gallery">
+<div class="platform">
+    <section class="tools">
+        <h1>Tools bar</h1>
+        <div class="item a"><p>Activate guide</p><i class="fas fa-robot"></i></div>
+        <div class="item a"><p>quotation help</p> <i class="fas fa-quote-right"></i><i class="fas fa-quote-left"></i></div>
+        <div class="item a"><p>phrases </p><i class="fas fa-search-location"></i></div>
+        <div class="item a"><p>Generate templates</p> <i class="fab fa-sketch"></i></div>
+        <div class="item a"><p>save</p><i class="fas fa-link"></i></div>
+        <div class="item a" id="trigger_search"><p>search</p><i class="fas fa-search"></i></div>
+        <div class="item a"><p>Review</p><i class="fas fa-eye"></i></div>
+        <div class="item a">
+            <select>
+                <option>English dictionary</option>
+                <option>Hebrew dictionary</option>
+                <option>Greek dictionary</option>
+                <option>Roman dictionary</option>
+            </select>
+        </div>
+        <div class="item a" onclick="fileSelect();"><input type="file" id="imageSelect" hidden /><p>Image</p><i class="fas fa-image"></i></div>
+        <div class="item a"><p>Auto Format</p><i class="fas fa-code"></i></div>
+        <div class="item a"><p>Delete</p><i class="fas fa-recycle"></i></div>
+        <div class="item a">
+            <select>
+                <option>RSV Bible</option>
+                <option>KJ Bible</option>
+                <option>NRV Bible</option>
+                <option>Other Bible</option>
+            </select>
+        </div>
+        <div class="item a"><p>Auto Read</p> <i class="fas fa-laptop-code"></i></div>
+        <div class="item a"><p>Upload Audioversion</p><i class="fas fa-headphones-alt"></i></div>
+    </section>
+    <section class="workarea">
+        <div class="formattools">
+            <div class="item a"><p><i class="fa fa-align-justify"></i></p>
+            <div class="tooltip">
+                <h1>align-justify</h1></p>
+            </div>
+        </div>
+            <div class="item a"><p><i class="fa fa-align-right"></i></p>
+                <div class="tooltip">
+                    <h1>align-right</h1></p>
+                </div>
+            </div>
+            <div class="item a"><p><i class="fa fa-align-center"></i></p>
+                <div class="tooltip">
+                    <h1>align-center</h1></p>
+                </div>
+            </div>
+            <div class="item a"><p><i class="fa fa-align-left"></i></p>
+                <div class="tooltip">
+                    <h1>align-left</h1></p>
+                </div>
+            </div>
+            <div class="item a"><p><i class="fa fa-bold"></i></p>
+                <div class="tooltip">
+                    <h1>bold</h1></p>
+                </div>
+            </div>
+            <div class="item a"><p><i class="fa fa-italic"></i></p>
+                <div class="tooltip">
+                    <h1>italic</h1></p>
+                </div>
+            </div>
+            <div class="item a"><p><i class="fa fa-underline"></i></p>
+                <div class="tooltip">
+                    <h1>underline</h1></p>
+                </div>
+            </div>
+            <div class="item a"><p><i class="fas fa-link"></i></p>
+                <div class="tooltip">
+                    <h1>link</h1></p>
+                </div>
+            </div>
+            <div class="item a"><p><i class="fa fa-list-ol"></i></p>
+                <div class="tooltip">
+                    <h1>list</h1></p>
+                </div>
+            </div>
+            <div class="item a"><p><i class="fa fa-list-ul"></i></p>
+                <div class="tooltip">
+                    <h1>bullet</h1></p>
+                </div>
+            </div>
+            <div class="item a" onclick="fileSelect();"><p><i class="fa fa-file-image"></i></p>
+                <div class="tooltip">
+                    <h1>picture</h1></p>
+                </div>
+            </div>
+            <div class="item a"><p><i class="fa fa-sync"></i></p>
+                <div class="tooltip">
+                    <h1>Restart</h1></p>
+                </div>
+            </div>
+            <div class="item a"><p><i class="fas fa-sort-numeric-down"></i></p>
+                <div class="tooltip">
+                    <h1>numbering</h1></p>
+                </div>
+            </div>
+            <div class="item a"><p><i class="fas fa-palette"></i></p>
+                <div class="tooltip">
+                    <h1>color</h1></p>
+                </div>
+            </div>
+            <div class="item a"><p></p></div>
+            <select>
+                <option value="">special Symbols</option>
+                <option value="">¼</option>
+                <option value="">½</option>
+                <option value="">¾</option>
+                <option value="">Ø</option>
+                <option value="">→</option>
+                <option value="">←</option>
+                <option value="">T</option>
+                <option value="">U</option>
+                <option value="">%</option>
+                <option value="">&</option>
+                <option value="">*</option>
+                <option value="">@</option>
+                <option value="">‰</option>
+                <option value="">¬</option>
+                <option value="">°</option>
+                <option value="">µ</option>
+                <option value="">÷</option>
+                <option value=""></option>
+            </select>
+              <div class="item a"><button>Go</button></div>
+        </div>
+      
+        <div class="writearea">
+            <div class="search">
+                <div class="toggle_show active">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="opt">
+                 <div class="options">
+                    <input type="text" placeholder="Search...." />
+                 <div class="result">
+                    <p>No result</p>
+                 </div>
+                 <div class="direction">
+                    <i class="fas fa-arrow-up" data_name="search"></i>
+                    <i class="fas fa-arrow-down"></i>
+                    <i class="fas fa-times" onclick="close_element(this);" data_name="search"></i>
+                 </div>
+                 </div>
+
+                 <div class="options">
+                    <input type="text" placeholder="Replace...." />
+                    <div class="direction">
+                        <i class="fas fa-line"></i>
+                        <i class="fas fa-list-ul"></i>
+                     </div>
+                 </div>
+                </div>
+            </div>
+            <div class="textarea">
+                <div class="title" contenteditable>Title of your message</div>
+                <div class="word"  contenteditable>
+                    <canvas class="word" contenteditable>
+                  type here...................
+                </canvas>
+                </div>
+            </div>
+            <div class="save">
+                <button>Save and continue</button>
+                <button>Save</button>
+            </div>
+        </div>
+    </section>
+
+</div>
+<div class="save_platform">
+    <div class="workarea">
+        <div class="mini_area">
+            <div class="coverimage">
+                <h1>Cover Image</h1>
+                <img src="images/blog-1.jpg" alt="" />
+            </div>
+            <div class="title"><h1>Haruka sample</h1></div>
+            <div class="work">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet sunt sit distinctio autem 
+                    quisquam. Dolores eveniet cum libero voluptas ad aperiam nobis, dignissimos quos dolore totam, earum consectetur, qui doloremque?</p>
+            </div>
+        </div>
+    </div>
+    <div class="savearea">
+        <form>
+            <div class="form-group">
+                <label>Publicity</label>
+                <select>
+                    <option></option>
+                    <option>Public</option>
+                    <option>Private</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Order</label>
+                <select>
+                    <option></option>
+                    <option>series project</option>
+                    <option>single project</option>
+                </select>
+            </div>
+            <div class="title">
+                <h1>Details</h1>
+            </div>
+            <div class="form-group">
+                <label>Save as</label>
+                <input type="text" />
+            </div>
+            <div class="fields">
+                <div class="form-group">
+                    <label>Save a copy</label>
+                    <input type="checkbox" />
+                </div>
+                <div class="form-group">
+                    <label>Download a Copy</label>
+                    <input type="checkbox" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Download options</label>
+                <select>
+                    <option></option>
+                    <option>P.D.F</option>
+                    <option>txt</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Add a tag</label>
+                <input type="text" value="#"/>
+            </div>
+            <div class="form-group">
+                <button>Save</button>
+                <button>Exit</button>
+            </div>
+        </form>
+    </div>
+</div>
+</section>
+
+
+
+ 
+
+   
+  </body>
+</html>

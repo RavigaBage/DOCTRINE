@@ -1,0 +1,449 @@
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+  }
+  :root{
+  --defaultcolor:#29d9d5;
+  }
+  html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 9rem;
+  }
+  
+  html::-webkit-scrollbar {
+    width: 1rem;
+  }
+  
+  html::-webkit-scrollbar-track {
+    background: #111;
+  }
+  
+  html::-webkit-scrollbar-thumb {
+    background: #29d9d5;
+    border-radius: 5rem;
+  }
+  body,html {
+    background: #111;
+    overflow-x: hidden;
+    height:100%;
+  }
+  nav{
+    width:100%;
+    padding-block:10px;
+  }
+  #menu-btn{
+    display:none;
+  }
+  .logo{
+    float:left;
+    color:var(--defaultcolor);
+    margin-left:20px;
+  }
+  nav .list{
+    float:right;
+    display:flex;
+    align-items:center;
+  }
+  nav a{
+    margin-inline:10px;
+    font-size:18px;
+    color:#fff;
+    text-decoration: none;
+  }
+  nav .user{
+    display: flex;
+    align-items: center;
+    color:#fff;
+    font-size:16px;
+    position:relative;
+  }
+  nav .user img{
+    width:30px;
+    height:30px;
+    border-radius: 50%;
+    margin-inline:3px;
+  }
+  nav .user .List{
+    position:absolute;
+    right:0;
+    z-index: 9990;
+    top:0;
+    width:0px;
+    opacity:0;
+    height:0px;
+    visibility:hidden;
+    transition:all 0.3s ease;
+    overflow: hidden;
+    margin-top:30px;
+    background:rgb(26, 25, 25);
+  }
+  nav .user .List.active{
+    width:230px;
+    opacity:1;
+    visibility: visible;
+    height:auto;
+  }
+  nav .user .List ul{
+    list-style: none;
+    padding-inline:10px;
+  }
+  nav .user .List ul li{
+    margin-block: 10px;
+    font-size: 20px;
+  }
+  nav .user .List ul li i{
+    float:right;
+  }
+.gallery{
+  position: relative;
+}
+/*platformarea */
+.platform{
+    width: 99%;
+    height: 100%;
+    display:flex;
+    padding:4px;
+    margin:0 auto;
+    box-shadow:0px 0px 4px 0px rgb(61, 60, 60);
+  }
+  .platform .tools{
+    width:220px;
+    height:100%;
+  }
+  .platform .tools h1{
+    color:var(--defaultcolor);
+    font-size: 22px;
+  }
+  .platform .tools .item{
+    width:100%;
+    height:30px;
+    background:rgb(26, 25, 25);
+    margin-block:10px;
+  }
+  .platform .tools .item select{
+     width:100%;
+     height:100%;
+     outline:none;
+     border:0px;
+  }
+  .platform .tools .item p{
+    color:#fff;
+    font-size: 18px;
+    float:left;
+  }
+  .platform .tools .item p span{
+    color:rgb(75, 74, 74);
+    background-color:var(--defaultcolor);
+    text-transform:lowercase;
+  }
+  .platform .tools .item  i{
+    font-size:20px;
+    color:var(--defaultcolor);
+    float:right;
+  }
+  .platform .workarea{
+    width:calc(100% - 220px);
+    height:100%;
+    display:flex;
+    flex-wrap:wrap;
+  }
+  .platform .workarea .formattools{
+    width:100%;
+    height:auto;
+    display:flex;
+    flex-wrap: wrap;
+    align-items:center;
+  }
+  .platform .workarea > .formattools > .item{
+    width:30px;
+    height:30px;
+    padding:5px;
+    margin:5px;
+    background:rgb(26, 25, 25);
+    margin-inline:10px;
+    position:relative;
+    cursor: pointer;
+  }
+  .platform .workarea > .formattools > .item button{
+    width:100%;
+    height:100%;
+    background:transparent;
+    color:var(--defaultcolor)
+  }
+  .platform .workarea > .formattools > .item p{
+    font-size:18px;
+    text-align: center;
+    color:var(--defaultcolor);
+  }
+  .tooltip{
+    opacity: 0;
+  }
+  .platform .workarea > .formattools > .item:hover .tooltip{
+    opacity: 1;
+    position:absolute;
+    margin-top:10px;
+    width:80px;
+    height:20px;
+    z-index: 999;
+    background-color: #000;
+    text-align:center;
+    font-family: 'rubik';
+  }
+  .tooltip h1{
+    color:#fff;
+  }
+  .platform .workarea > .writearea{
+    width:99%;
+    margin:0 auto;
+    height:80vh;
+    overflow:auto;
+    position:relative;
+  }
+  .platform .workarea > .writearea > .textarea{
+    width: 100%;
+    height: 100%;
+    font-size: 18px;
+    color:#fff;
+    font-family: 'rubik';
+  }
+  .platform .workarea > .writearea > .textarea .title{
+    width: 100%;
+    height:20px;
+    color:#ddd;
+    background:rgb(39, 38, 38);
+    font-size:18px;
+    transition:all 0.3s ease;
+  }
+  .platform .workarea > .writearea > .textarea .title.active{
+    height:40px;
+  }
+  .platform .workarea > .writearea > .textarea .word{
+    color: rgb(255 63 63);
+    text-transform: none !important;
+    width:100%;
+    height:calc(100% - 40px);
+  }
+  .platform .workarea > .writearea > .textarea .word.switch{
+    background:rgb(255, 255, 255);
+    color:rgb(10, 10, 10);
+  }
+  .platform .workarea > .writearea > .textarea .word.active{
+   color:#fff;
+  }
+  .platform .workarea > .writearea .search{
+    position:absolute;
+    top:0;
+    right:0;
+    width:50%;
+    height:35px;    
+    margin-top:-30px;
+    display:none;
+    overflow: hidden;
+    z-index: 999;
+    background:rgb(10, 10, 10);
+    transition:all 5s ease;
+  }
+  .platform .workarea > .writearea .search.show{
+    display:flex;
+    margin-top:0px;
+  }
+  .platform .workarea > .writearea .search.active{
+    min-height:30px;    
+    height:auto;
+  }
+  .platform .workarea > .writearea .search .toggle_show{
+    width:30px;
+    height:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#fff;
+    background:rgb(37, 37, 37);
+  }
+  .platform .workarea > .writearea .search .toggle_show.active{
+    height:auto
+  }
+  .platform .workarea > .writearea .opt{
+    width:calc(100% - 32px);
+    height:auto;
+  }
+  .platform .workarea > .writearea .search input{
+    width:calc(100% - 170px);
+    min-height:30px;
+    margin-block:3px;
+    background:rgb(37, 37, 37);
+    color:rgb(255, 253, 253);
+  }
+  .platform .workarea > .writearea .opt .options{
+    display:flex;
+    align-items: center;
+  }
+  .platform .workarea > .writearea .opt .options .result{
+    color:crimson;
+    width: auto;
+    font-size:16px;
+  }
+  .platform .workarea > .writearea .opt .options .direction i{
+    color:#fff;
+    margin-inline:10px;
+    font-size:16px;
+    padding:3px;
+  }
+  .platform .workarea > .writearea .opt .options .direction i:hover{
+    background-color:rgb(46, 45, 45);
+    border-radius: 5px;
+  }
+  .platform .workarea > .writearea .opt .options i.fa-times{
+    color:red;
+  }
+  .platform .workarea > .writearea .opt .options .direction{
+    display:flex;
+  }
+  .save{
+    position:absolute;
+    bottom:0;
+    right:0;
+    display:flex;
+  }
+  .save button{
+    width: 150px;
+    height:45px;
+    margin-inline:2.5px;
+    outline:none;
+    border:0px;
+    border-radius:6px;
+    background-color:teal;
+    color:#fff;
+  }
+  .save button:hover{
+    background-color:crimson;
+    transform:translateY(-10px);
+  }
+
+  select{
+    height:40px;
+    background:rgb(26, 25, 25);
+    color:#fff;
+  }
+  .platform{
+    position:relative;
+  }
+  .toolkit{
+    position:fixed;
+    top:0;
+    left:0;
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    background:crimson;
+    color:#fff;
+    place-items:center;
+    font-size:25px;
+    margin-top:70px;
+    z-index:9999;
+    display:none;
+  
+  }
+  @media screen and (max-width:1230px){
+    .toolkit{
+      display:grid;
+    }
+    section {
+      padding: 0rem 0%;
+  }
+    .platform .tools{
+    position:absolute;
+    top:0;
+    left:0;
+    width:0%;
+    height:0%;
+    z-index:999;
+    display:none;
+    background:rgb(26, 25, 25);
+  }
+  .platform .tools.active{
+    display:block;
+    width:100%;
+    height:100%;
+  }
+  .platform .workarea {
+    width:100%;
+  }
+  }  
+
+  .save_platform{
+    position:absolute;
+    inset:0;
+    width:80%;
+    margin-block:50px;
+    margin-inline:10%;
+    background:#fff;
+    box-shadow: 0px 0px 4px 0px #ddd;
+    display: none;
+  }
+  .workarea, .savearea{
+    width:50%;
+    height:100%;
+  }
+  .workarea .coverimage{
+    width:100%;
+    height:150px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .workarea .coverimage img{
+    width:100px;
+    height:100px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  .savearea form{
+    width:100%;
+    height:100%;
+    font-size:17px;
+  }
+  .fields{
+    width:100%;
+    display:flex;
+  }
+  .fields .form-group{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+  }
+  .savearea form .fields .form-group input{
+    width:20px;
+    height:20px;
+  }
+  .savearea form .form-group input,   .savearea form .form-group select{
+   width:100%;
+   height:35px;
+   outline:none;
+   border-width:0px;
+   border-bottom:1px solid #000;
+   background:transparent;
+   color:rgb(0, 0, 0);
+  }
+  .savearea form .form-group button{
+    width:120px;
+    height:45px;
+    outline:none;
+    border-width:10px;
+   background:var(--defaultcolor);
+   color:#fff;
+   font-size:20px;
+   margin:10px;
+  }
